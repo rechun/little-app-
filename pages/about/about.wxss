@@ -1,0 +1,8 @@
+.favorite-text{
+  margin: 0 auto;width: 100%;height: 5rem;
+}
+.text-love{margin: 0 auto;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #BCC1CC;width: 22rem;display: block;}

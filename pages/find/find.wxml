@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container bg-blue">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+   
+  </view>
+  </view>
+    <view class="book-card">
+     <image  mode="bottom" src="../image/books.jpg"
+     style="width:90px;margin:0 auto;height:90px;display:block;"></image>
+      <text class="text-book">{{text}}</text>
+       <button type="primary" size="defaultSize"  plain="false"class="seaserch-btn" style=" border: none; height:1.5rem;width:6rem;line-height: 1.5rem;font-size: 1rem;margin:0 auto; position: relative;top:0.4rem;color:#fff;background-color:#13CE66;font-size:0.8rem;"> 前往绑定 </button>
+  </view>

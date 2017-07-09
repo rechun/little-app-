@@ -1,0 +1,45 @@
+
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/about/about",
+    "pages/logs/logs"
+
+    ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "图书盒子",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": [
+      "rgb(51,143,252)"
+    ],
+  
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "找书",
+        "iconPath": "pages/image/book.png",
+        "selectedIconPath":"pages/image/books.jpg"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "收藏",
+        "iconPath": "pages/image/收藏.jpg",
+        "selectedIconPath": "pages/image/ffs.jpg"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "我",
+        "iconPath": "pages/image/我.jpg",
+        "selectedIconPath": "pages/image/me.jpg"
+      }
+    ]
+  }
+}

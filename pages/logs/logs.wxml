@@ -1,0 +1,17 @@
+<!--logs.wxml-->
+<view class="search">
+
+    <view class="userinfo-avatar">
+    <image  mode="bottom" class="image-searc"  src="../image/box.jpg"/>
+    </view>
+    <view class="search-input">
+      <view class="serch-book" style="display:flex; position: relative;top:3rem;height:2.2rem;border: 0.1rem solid #F9FCFF;">
+           <icon type="search" size="23"class="search-img" />
+           <input  placeholder="书名/作者/ISBN"  class="serach-text" bindinput="bindSearchInput" />
+      </view>
+     <button type="default" size="defaultSize"  plain="false"class="seaserch-btn" style=" border: none; height:4rem;background-color: rgb(51,143,252);color:white;line-height: 4rem;font-size: 1rem;margin:0; position: relative;top:1.4rem;"> 搜索 </button>
+      
+    
+    </view>
+
+</view>

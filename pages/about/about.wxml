@@ -1,0 +1,9 @@
+<view class="favorite">
+  <view class="favorite-image">
+     <image   mode="bottom" src="../image/porket.jpg"
+     style="display:block;width:6rem;margin:0 auto;"></image>
+  </view>
+  <view class="favorite-text">
+  <text class="text-love">{{text}}</text>
+  </view>
+</view>
