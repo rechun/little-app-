@@ -80,7 +80,7 @@ Page({
     console.log('inputPhone'+ inputPhone);
     console.log('shareNum'+shareNum);
     wx.request({
-      url: 'https://laohuangli.intbull.com/Api/Cms/stock/m/'+inputPhone+'/sc/'+shareNum, 
+      url: 'https://laohuangli.intbull.com/Api/Cms/stock/m/'+inputPhone+'/sc/'+shareNum+'/c/2', 
       data: {
       },
       header: {
@@ -129,6 +129,8 @@ cleanMessage:function(e){
 // 接口请求
   onReady: function () {
     var that = this;
+    console.log('jock');
+    this.fetchJoke();
     wx.request({
       url: 'https://laohuangli.intbull.com/switch.json', 
       header: {
@@ -136,9 +138,9 @@ cleanMessage:function(e){
       },
       method:'GET',
       success: function(res) {
-        console.log(res.data.stock_hid );
+        console.log('stock_hid1'+res.data.stock_hid1 );
         that.setData({
-            hid: res.data.stock_hid 
+            hid: res.data.stock_hid1 
           });
       }
     })
