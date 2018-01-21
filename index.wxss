@@ -1,0 +1,195 @@
+/**index.wxss**/
+
+.container{
+  height: 1500rpx;
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #2A8CE5;
+}
+.container .search-left{
+  flex: 8;
+  background: #4EA3E7;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+/*feed-item part is in app.wxss for multiplexing*/
+
+
+
+.top_time,.now_share{color: #000;font-size: 22px;font-weight:500;
+  text-align: center;line-height:40px;}
+.grey_border{width: 100%;border-bottom: 2px solid #dfdfdf;font-size: 18px;text-align: center;}
+.grey_border text{display: block;}
+.buy_red text{color:#c95454;}
+.buy_green text{color: #4db770;}
+.containe{width: 100%;display: block;}
+.share_item{height: 45px;font-size: 18px;}
+.item_left_number{color: #dfdfdf;display: block;}
+.item_left{float: left;}
+.item_right{float: right;}
+.item_left text{display: block;font-size: 16px;}
+.item_title{font-weight: bold;}
+.item_border_grey{width: 90%;border-bottom: 2px solid #dfdfdf;padding: 0 5%;}
+.item_number{display: inline-block;}
+.right_red{display: flex;width: 100%;}
+.right_red text{text-align: right;}
+.red_number,.item_number {color: #ff1010;}
+.shareDoctor{width:75%;border:none;color: #999;font-size: 15px;font-weight: 100;
+margin: 0 auto;background-color: #fff;text-align: left;line-height: 1.4rem;border-radius: 0.3rem;
+padding: 0.3rem  2.5%;}
+
+.Doctor{
+  top:o;left:0;
+  position: relative;
+  width: 100%;height: 100%;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_top.jpg);
+  background-position:center;background-size: cover;
+  background-repeat: no-repeat;
+}
+.DoctorGreenRed{
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_t1.png);
+  background-position:center;background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;height: 5rem;
+  margin: 0 auto;
+
+}
+.Result{
+  width: 100%;height: 24rem;
+  background-image: url(https://laohuangli.intbull.com/result.png);background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.BlockFour{
+  width: 100%;height: 7rem;
+  background-image: url(https://laohuangli.intbull.com/block.png);background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.blueBg{
+  background-color:#2882d8;width: 100%;height: auto; 
+  color: #fff;
+}
+.buttonDefault{animation: aa 1s infinite ease-in-out;
+  -webkit-animation: aa 1s infinite ease-in-out;
+  background:#e78318;width: 80%;height: 1.5rem;color: #fff;
+  font-size: 20px;line-height: 1.5rem;text-align: center;
+  margin: 0.5rem auto 0;box-shadow: 2px 2px 2px #e78318;border-radius: 5rem;}
+  .buttonDefaultBtn{
+    background:#e78318;width: 80%;height: 1.5rem;color: #fff;
+    font-size: 20px;line-height: 1.5rem;text-align: center;
+    margin: 0.4rem auto 0;box-shadow: 2px 2px 2px #e7831886;border-radius: 0.4rem;
+  }
+@-webkit-keyframes aa {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(0.95)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+.blockBlueBg{position: absolute;top: 10%;width: 90%;left:5%;background-color: #32a2d4;height: 60%;border-radius: 0.5rem;display: block;}
+.resultTitle{margin-top: 2rem;width: 100%;text-align: center;color: #fff;text-shadow: #000 2px 2px 2px;font-weight: bold;font-size: 24px;}
+.resultQuastion{color: #fff;text-indent: 1.5rem;font-weight: bold;margin-top: 0.5rem;font-size: 18px;}
+.resultNumber{color: red;font-weight: bold;text-indent: 1.5rem;font-size: 18px;}
+.resultResult{padding:0 1.5rem;color: #fff;font-size: 14px;}
+.sharePhone{width: 80%;margin: 0 auto;background-color: #fff;text-align: center;font-size: 16px;
+  border: 1px solid #bdb8b9;border-radius: 0.4rem;height: 1.8rem;line-height: 1.8rem;}
+  .DoctorWhite{position: absolute;color: #fff;font-size: 10px;display: block;right: 0;top: 0;}
+.DoctorRound{
+  width: 9rem;height: 9rem;margin: 0 auto;background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_t2.png);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+  webkit-animation: xuzh 20s linear infinite;
+  animation: xuzh 20s linear infinite;
+}
+.zp_1{
+  position: absolute;top: 6rem;
+  width: 7rem;height: 7rem;left: 32%;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_t3.png);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.zp_2{
+  position: absolute;top: 7rem;
+  width: 5rem;height:5rem;left: 37%;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/zhizhen.png);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+  -webkit-animation: xuzh 3s linear infinite;
+    animation: xuzh 3s linear infinite;
+}
+/*指针旋转*/
+@-webkit-keyframes xuzh{
+	from{ -webkit-transform: rotate(0);}
+	to{-webkit-transform: rotate(360deg);}
+}
+@keyframes xuzh{
+	from{ transform: rotate(0);}
+	to{transform: rotate(360deg);}
+}
+.docotrTime{font-size: 0.8rem;color: #cbe5fd;text-align: center;line-height: 2.5rem;width: 100%;display: block;}
+.WhiteBg{width: 100%;height: 8rem;background-color: #fff;}
+.white_1{
+  margin-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
+  width: 3.5rem;height:3.5rem;
+  border-right: 1px solid #dedede;
+  float: left;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_c11.jpg);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.white_2{
+  padding-right: 2rem;
+  margin-top: 2rem;
+  width: 3.5rem;height:3.5rem;
+  float: left;
+  border-right: 1px solid #dedede;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_c12.jpg);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.white_3{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 3.5rem;height:3.5rem;
+  float: left;
+  background-image: url(http://www.9151gp.com/1709/468/wtg_qlgmm/images/qlmm_c13.jpg);
+  background-position: center;background-size: contain;background-repeat: no-repeat;
+}
+.white_text{font-size: 12px;color: #999;display: block;word-break: keep-all;text-align: center;}
+.blackBG{background-color: rgba(0, 0,0, 0.8);z-index: 879;width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.whiteBG{width: 80%;margin: 150px auto 0;background-color: #fff;height: 8.8rem;border-radius: 0.2rem;}
+.webTitle{width: 100%;font-weight: 500;display: block;padding: 1rem 0;text-align: center;display: block;font-size: 14px;}
+.webContent{font-size: 16px;margin: 0 1rem;line-height:1.2rem;display: block;color: #888;margin-bottom: 0.8rem;}
+.webSure{display: block;border-top: 1px solid #e8e8e8;width: 100%;line-height: 2rem;text-align: center;font-size: 14px;}
+.changeShare{width: 100%;}
+.bgBlack{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 22;}

@@ -1,0 +1,101 @@
+
+<!--index.wxml-->
+<!--<scroll-view  scroll-y="true" class="container" lower-threshold="5" bindscrolltolower="lower">-->
+<view class="container">
+   <view wx:if="{{hid}}">
+    <block wx:for="{{jokes}}">
+        <view class="feed-item">
+            <view class="feed-source">
+                <a>
+                    <view class="avatar">
+                        <image src="{{item.profile_image}}"></image>
+                    </view>
+                    <text>{{item.name}}</text>
+                </a>
+                <text class="item-more">{{item.create_time}}</text>
+            </view>
+            <view class="feed-content">
+                <view class="answer-body">
+                    <view bindtap="bindItemTap">
+                        <text class="answer-txt" aid="{{answer_id}}">{{item.text}}</text>
+                    </view>
+                    <view class="answer-actions" bindtap="bindItemTap">
+                        <view class="like dot">
+                            <a>{{item.love}} 顶</a>
+                            
+                            
+                        </view>
+                        <view class="comments dot">
+                            <a>{{item.hate}} 踩 </a>
+                        </view>
+                        <!--<view class="follow-it">
+                            <a>关注问题</a>
+                        </view>-->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+   </view> 
+   <!--诊股开始-->
+<view wx:else class="changeShare">
+    <view class="Doctor">
+        <text class="DoctorWhite">{{show}}</text>
+        <view class="DoctorGreenRed">
+        <view class="zp_1"></view>
+    </view>
+    <view class="DoctorRound"></view>
+    <view class="zp_2"></view>
+    <text class="docotrTime">专业诊股  锁定买卖时机</text>
+    <input class="shareDoctor" type="number" placeholder="输入股票代码/简称，人工智能为您诊断" bindchange="bindChange" />
+     <view class="buttonDefault" bindtap="doctor">开始诊断</view>
+     <text class="docotrTime">个股操作 一测便知</text>
+    </view>
+    <view class="WhiteBg">
+        <view class="white_1">
+            <text  class="white_text" style="margin-top: 3.5rem;">五大维度”精准分析</text>
+            <text  class="white_text">洞悉潜力股票</text>
+        </view>
+        <view class="white_2">
+            <text  class="white_text" style="margin-top: 3.5rem;margin-left:0.5rem;">全天候在线盯盘</text>
+            <text  class="white_text" style="margin-left:0.5rem;">实时操作解析</text></view>
+        <view class="white_3">
+            <text  class="white_text" style="margin-top: 3.5rem;margin-left:-1.5rem;">第一时间反馈诊股结果</text>
+            <text  class="white_text"style="margin-left:-1.5rem;">并答疑解难</text></view>
+    </view>
+<!--<view class="BlockFour"></view-->
+    <view class="Result"></view>
+        
+ </view>
+ <!--蓝色弹窗-->
+ <view class="blackBG" style="display:{{showBlue}}">
+    <view class="blockBlueBg" >
+            <view class="resultTitle">诊股结果</view>
+            <view  class="resultQuastion">你所查询的个股是：</view>
+            <view  class="resultNumber">{{sharenumber}}</view>
+            <view  class="resultResult">诊股系统编写报告已完成，诊股结果将以短信的形式直接发送到您的手机中，请注意查收！</view>
+            <input class="sharePhone" type="number"  placeholder="请输入手机号码" bindinput="phoneChange"/>
+            <view class="buttonDefaultBtn"  bindtap="sendMessage">立即诊断</view>
+            <view  class="resultResult" style="text-align:center;margin-top:0.5rem;">接收短信完全免费</view>
+        </view> 
+</view>        
+<!--蓝色弹窗结束-->
+
+<!--白色弹窗-->
+<view class="blackBG"  style="display:{{showWin}}">
+   <view class="whiteBG">
+        <text class="webTitle">网页提示</text>
+        <text class="webContent">您的电话已成功提交，请保持手机畅通，稍后会有专业分析师与您联系。</text>
+      <text class="webSure" bindtap="cleanMessage">确定</text>
+   </view>
+</view>
+<!--白色弹窗结束-->
+</view>
+<view style="color:white;display:none;">{{inputphone}}</view>
+
+
+<!--</scroll-view>-->
+
+
+
+
