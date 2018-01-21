@@ -1,40 +1,38 @@
-//app.js 全局逻辑层
+//app.js
 App({
-  onLaunch: function() {
-    var that = this;
-    // 使用设备可视宽高
-    wx.getSystemInfo({
-      success: function (res) {
-        that.globalData.windowWidth = res.windowWidth;
-        that.globalData.windowHeight = res.windowHeight;
-      }
-    });
+  onLaunch: function () {
+    //调用API从本地缓存中获取数据
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
   },
-
-  getUserInfo: function(cb) {
+  getUserInfo:function(cb){
     var that = this
-    if (this.globalData.userInfo) {
+    if(this.globalData.userInfo){
       typeof cb == "function" && cb(this.globalData.userInfo)
-    } else {
+    }else{
       //调用登录接口
-      wx.getUserInfo({
-        withCredentials: false,
-        success: function(res) {
-          that.globalData.userInfo = res.userInfo
-          typeof cb == "function" && cb(that.globalData.userInfo)
+      wx.login({
+        success: function () {
+          wx.getUserInfo({
+            success: function (res) {
+              that.globalData.userInfo = res.userInfo
+              typeof cb == "function" && cb(that.globalData.userInfo)
+            }
+          })
         }
       })
     }
   },
+  globalData:{
+    userInfo:null,
+    requestUrl : "https://route.showapi.com/255-1",
+    appid : "27982",
+    apiKey : "495a1755b3184e4f8dfe30f818eb1a5e",
+    tText : '29',
+    tImg : '10',
+    tAudio : '31',
+    tVideo : '41'
 
-  globalData: {
-      userInfo: null,
-      windowWidth: 0,
-      windowHeight: 0,
-      doubanBase: "https://api.douban.com",
-      name:"/v2/book/:id",
-      ISBN:"/v2/book/isbn/:name",
-      search: "/v2/book/search"
-   
   }
 })
